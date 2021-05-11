@@ -12,11 +12,10 @@ export default class Homepage extends React.Component {
             <>
                 <div className={"container"}>
                     <div className={'heading'}>
-                        <h1>Product Manage Project</h1>
+                        <h1>Form Builder Project</h1>
                     </div>
                     <div className={'description'}>
                         <p>React</p>
-                        <p>Hooks</p>
                         <p>Redux</p>
                         <p>React Router</p>
                     </div>

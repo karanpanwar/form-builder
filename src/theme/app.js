@@ -3,7 +3,8 @@ import "./app.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Homepage from "./homepage/homepage";
-import Product from "./product/product";
+import CreateForm from "./create-form/create-form";
+import FormView from "./form/form-view";
 import {Switch, Route, NavLink} from "react-router-dom";
 
 class App extends React.Component {
@@ -23,8 +24,8 @@ class App extends React.Component {
                                 <NavLink to="/" className="nav-link" exact>
                                     Home
                                 </NavLink>
-                                <NavLink to="/product" className="nav-link">
-                                    Products
+                                <NavLink to="/create-form" className="nav-link">
+                                Create Form
                                 </NavLink>
                             </Nav>
                         </Navbar.Collapse>
@@ -33,7 +34,8 @@ class App extends React.Component {
                 <div className="mid-content">
                 <Switch>
                     <Route exact path="/" component={Homepage}/>
-                    <Route path="/product" component={Product}/>
+                    <Route path="/create-form" component={CreateForm}/>
+                    <Route path="/form/:slug" component={FormView}/>
                 </Switch>
                 </div>
             </>
